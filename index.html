@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Prastyo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/84f27eff75.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Front-End/Back-End</p>
+        <h1>Hi There! I'm <span>Mario</span><br>Prastyo From Indonesian</h1>
+      </div>
+    </div>
+  </div>
+<!-- -----------about---------- -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.jpg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I come from Bekasi Indonesian West Java, I am 14 years old, study at SMP Negeri 1 Bekasi</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          </div>
+          <div class="tab-contents active-tab">
+            <ul>
+              <li><span>Front-End/Back-End</span><br>Front-end and back-end are both related to software engineering and website development.</li>
+              <li><span>SA-MP Development</span><br>Make a RolePlay Server.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-----------services---------->  
+<div id="services">
+  <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Develompent</h2>
+          <p> delivering websites or web apps, cybersecurity solutions, UX/UI design, eCommerce solutions, website architectures, QA testing, maintenance, consulting, and even a custom CMS.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>SA-MP Develompent</h2>
+          <p>presents SAMP GTA server creation services with various game modes and other special additional features.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-cube"></i>
+          <h2>DDoS Services</h2>
+          <p>presents a service for taking down other people's servers or other people's games with special tools and powers that are not newbie power.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+  </div>
+</div>
+<!-----------portfolio---------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+      <img src="images/work-1.jpg">
+      <div class="layer">
+        <h3>DDoS Services</h3>
+        <p>DDoS stands for Distributed Denial of Service. It's a type of computer attack that involves flooding a network with so much malicious traffic that it can't operate normally. This can cause a website, computer, or online service to go offline.</p>
+      </div>
+      </div>
+      <div class="work">
+        <img src="images/work-2.jpg">
+        <div class="layer">
+          <h3>SA-MP Develompent</h3>
+          <p>the art of creating games and describes the design, development and release of a game.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/work-3.png">
+        <div class="layer">
+          <h3>Web development</h3>
+          <p>the tasks associated with creating, building, and maintaining websites and web applications that run online on a browser.</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See More</a>
+  </div>
+</div>
+<!------------Contact--------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"><br></i>jawabaratcyberteam@proton.mail</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/marioprsty/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://telegram.com"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+      <div class="contact-right"></div>
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn2">Submit</button>
+      </form>
+      <span id="msg">hello</span>
+    </div>
+  </div>
+</div>
+<div class="copyright">
+  <p>Copyright © Mario. Made with <i class="fa-solid fa-heart"></i></p>
+</div>
+
+  <script>
+
+    var tablinks = document.getElementsByName("tab-links");
+    var tabcontents = document.getElementsByName("tab-contents");
+
+    function opentab(tabname){
+         for(tablink of tablinks){
+             tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+             tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.remove("active-link");
+         document.getElementById(tabname).classList.add("active-tab"); 
+    }
+
+  </script>
+
+  <script>
+
+    var sidemenu = doc.getElementById("sidemenu");
+
+    function openmenu(){
+         sidemeu.style.right = "0";
+    }
+    function closemenu(){
+         sidemeu.style.right = "-200px";
+    }
+
+  </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyaA1f1rITf_FuusUltcSDwDxBdzHaZ4I9KLCE0S41mlGGeaa297lV7gL-_ByO4C4mACw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent sucessfully"
+         setTimeout(function(){
+          msg.innerHTML = ""
+         })
+      },5000)
+      form.reset()
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
